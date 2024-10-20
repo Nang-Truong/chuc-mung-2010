@@ -1,0 +1,81 @@
+<html lang="vi">  
+<head>  
+ <meta charset="UTF-8">  
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+ <title>Chúc Mừng20/10</title>  
+ <style>  
+ body {  
+ display: flex;  
+ justify-content: center;  
+ align-items: center;  
+ height:100vh;  
+ background-color: #f0c2e2;  
+ margin:0;  
+ position: relative;  
+ overflow: hidden;  
+ font-family: Arial, sans-serif;  
+ text-align: center;  
+ }  
+ h1 {  
+ position: absolute;  
+ top:20px;  
+ font-size:3em;  
+ color: #fff;  
+ text-shadow:2px2px5px rgba(0,0,0,0.3);  
+ }  
+ .heart {  
+ width:100px;  
+ height:100px;  
+ background-color: red;  
+ position: relative;  
+ transform: rotate(-45deg);  
+ animation: heartbeat1.5s infinite;  
+ margin:20px auto0;  
+ }  
+ .heart::before,  
+ .heart::after {  
+ content: '';  
+ width:100px;  
+ height:100px;  
+ background-color: red;  
+ border-radius:50%;  
+ position: absolute;  
+ }  
+ .heart::before {  
+ top: -50px;  
+ left:0;  
+ }  
+ .heart::after {  
+ left:50px;  
+ }  
+ @keyframes heartbeat {  
+0%,20%,40%,60%,80%,100% {  
+ transform: scale(1);  
+ }  
+10% {  
+ transform: scale(1.1);  
+ }  
+30% {  
+ transform: scale(1.2);  
+ }  
+50% {  
+ transform: scale(1.1);  
+ }  
+70% {  
+ transform: scale(1);  
+ }  
+ }  
+ </style>  
+</head>  
+<body>  
+ <h1>Chúc Mừng20/10 nhé!</h1>  
+ <div class="heart"></div>  
+ <script>  
+ document.body.addEventListener('mousemove', function(e) {  
+ const heart = document.querySelector('.heart');  
+ heart.style.left = e.pageX -50 + 'px';  
+ heart.style.top = e.pageY -50 + 'px';  
+ });  
+ </script>  
+</body>  
+</html>
